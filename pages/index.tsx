@@ -5,9 +5,11 @@ import BigCustomerItem from "../components/customer/big-customer-item";
 import SmallCustomerItem from "../components/customer/small-customer-item";
 import BigProductItem from "../components/product/large-product-item";
 import SmallProductItem from "../components/product/small-product-item";
+import RecursiveComponent from "../components/RecursiveComponent";
 import RegularList from "../components/regular-list";
 import { bigCustomers } from "../data/big-customers";
 import { bigProducts } from "../data/big-products";
+import { nestedData } from "../data/nested-data";
 import { smallCustomers } from "../data/small-customers";
 import { smallProducts } from "../data/small-products";
 import styles from "../styles/Home.module.css";
@@ -23,6 +25,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
+        <RecursiveComponent data={nestedData}/>
         <RegularList
           items={bigCustomers}
           resourceName="customer"
