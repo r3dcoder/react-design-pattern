@@ -13,7 +13,13 @@ export const nestedData = {
         degree: "Bachelor of Science",
         field: "Computer Science",
         school: "University of California, Berkeley",
-        year: 2015
+        year: 2015,
+        university:[
+            {
+                name:"Name 1 ",
+                location:"location 1"
+            }
+        ]
       },
       {
         degree: "Master of Science",

@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import { BigSuccessButton, DangerButton } from "../components/Button";
 import BigCustomerItem from "../components/customer/big-customer-item";
 import SmallCustomerItem from "../components/customer/small-customer-item";
 import BigProductItem from "../components/product/large-product-item";
@@ -25,7 +26,10 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <RecursiveComponent data={nestedData}/>
+        <DangerButton text="Don't do it" />
+        <BigSuccessButton text="Yes" />
+
+        <RecursiveComponent data={nestedData} />
         <RegularList
           items={bigCustomers}
           resourceName="customer"
